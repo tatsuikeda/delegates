@@ -14,6 +14,45 @@
 
 @implementation XYZViewController
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    // Label: "App"
+    // TextField: "App"
+    // string: "l"
+    // Label : TextField + string
+    
+    NSString *updatedString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
+    /*
+    if ([string isEqualToString:@"a"])
+    {
+        return NO;
+    }
+    */
+    
+    /*
+    if ([string caseInsensitiveCompare:@"a"] == NSOrderedSame)
+    {
+        return NO;
+    }
+    */
+    
+    if ([string compare:@"a" options:NSCaseInsensitiveSearch] == NSOrderedSame)
+    {
+        return NO;
+    }
+     
+    //self.outletUILabel.text = textField.text;
+    [self.outletUILabel setText:updatedString];
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
