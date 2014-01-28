@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XYZViewController : UIViewController<UITextFieldDelegate>
+@interface XYZViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *outletUILabel;
 
 @end
