@@ -16,7 +16,18 @@
 
 - (void)actionDidTapClearButton:(id)sender
 {
-self.outletTextField.text = @"";
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Are you sure?" message:@"Really sure?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", @"Maybe", nil];
+    
+    [alert show];
+    NSLog(@"Not waiting!");
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"Clicked button: %d",buttonIndex);
+    if (buttonIndex == 1) {
+        self.outletTextField.text = @"";
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
