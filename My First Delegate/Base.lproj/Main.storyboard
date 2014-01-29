@@ -39,14 +39,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="actionDidTapClearButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PWX-Nd-PdE"/>
-                                    <action selector="didTapClearButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ogq-2g-m20"/>
+                                    <action selector="actionDidTapClearButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fxP-oR-zP0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="outletTextField" destination="poN-cw-0iB" id="4RE-Na-aMr"/>
                         <outlet property="outletUILabel" destination="kwA-lf-GQa" id="h77-6A-pnv"/>
                     </connections>
                 </viewController>

@@ -14,6 +14,11 @@
 
 @implementation XYZViewController
 
+- (void)actionDidTapClearButton:(id)sender
+{
+self.outletTextField.text = @"";
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
